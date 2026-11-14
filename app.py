@@ -128,4 +128,9 @@ with gr.Blocks() as interfaz:
     )
 
 if __name__ == "__main__":
-    interfaz.launch()
+    
+import os
+
+puerto = int(os.environ.get("PORT", 10000))
+interfaz.launch(server_name="0.0.0.0", server_port=puerto)
+
